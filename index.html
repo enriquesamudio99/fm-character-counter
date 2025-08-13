@@ -1,35 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Character counter</title>
+  <link rel="stylesheet" href="./assets/styles/main.css">
 </head>
+
 <body>
 
-  Analyze your text in real-time.
+  <header class="header">
+    <div class="header__container container">
+      <nav class="navbar">
+        <div class="navbar__container">
+          <a href="#" class="navbar__logo">
+            <img src="./assets/images/logo-light-theme.svg" alt="Light Logo" class="navbar__logo-img navbar__logo-img--light">
+          </a>
+          <button class="navbar__toggle">
+            <img src="./assets/images/icon-moon.svg" alt="Moon Icon" class="navbar__toggle-icon">
+          </button>
+        </div>
+      </nav>
+      <div class="hero">
+        <div class="hero__container">
+          <div class="hero__content">
+            <h1 class="hero__title">Analyze your text in real-time.</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="main">
+    <section class="typing">
+      <div class="typing__container container">
+        <textarea class="textarea" name="text" id="text" placeholder="Start typing here… (or paste your text)">Design is the silent ambassador of your brand. Simplicity is key to effective communication, creating clarity in every interaction. A great design transforms complex ideas into elegant solutions, making them easy to understand. It blends aesthetics and functionality seamlessly.</textarea>
+        <div class="textarea-controls">
+          <div class="textarea-controls__container">
+            <div class="textarea-controls__left">
+              <div class="textarea-controls__item">
+                <label class="checkbox">
+                  <input type="checkbox" id="exclude-spaces" class="checkbox__input" />
+                  <span class="checkbox__checkmark"></span>
+                  Exclude spaces
+                </label>
+              </div>
+              <div class="textarea-controls__item">
+                <label class="checkbox">
+                  <input type="checkbox" id="set-character-limit" class="checkbox__input" />
+                  <span class="checkbox__checkmark"></span>
+                  Set Character Limit
+                </label>
+                <!-- <input type="number" name="character-limit" id="character-limit" min="1" value="200" class="textarea-controls__number"> -->
+              </div>
+            </div>
+            <div class="textarea-controls__right">
+              <p class="textarea-controls__reading-time">
+                Approx. reading time: <<span id="reading-time" class="textarea-controls__reading-time-number">1</span>
+                minute
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="stats">
+      <div class="stats__container container">
+        <div class="stats__cards">
+          <div class="stats__card stats__card--total">
+            <p class="stats__card-number">278</p>
+            <p class="stats__card-title">Total Characters</p>
+          </div>
+          <div class="stats__card stats__card--word">
+            <p class="stats__card-number">39</p>
+            <p class="stats__card-title">Word Count</p>
+          </div>
+          <div class="stats__card stats__card--sentence">
+            <p class="stats__card-number">04</p>
+            <p class="stats__card-title">Sentence Count</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="letters">
+      <div class="letters__container container">
+        <h2 class="letters__title">Letter Density</h2>
+        <!-- <p class="letters__text">No characters found. Start typing to see letter density.</p> -->
+        <div class="letters__info">
+          <div class="letters__grid">
+            <div class="letter">
+              <p class="letter__title">A</p>
+              <div class="letter__bar-container">
+                <div class="letter__bar"></div>
+              </div>
+              <div class="letter__data">
+                <p class="letter__data-number">40</p>
+                <p class="letter__data-percentage">(16.06%)</p>
+              </div>
+            </div>
+            <div class="letter">
+              <p class="letter__title">B</p>
+              <div class="letter__bar-container">
+                <div class="letter__bar"></div>
+              </div>
+              <div class="letter__data">
+                <p class="letter__data-number">29</p>
+                <p class="letter__data-percentage">(11.65%)</p>
+              </div>
+            </div>
+            <div class="letter">
+              <p class="letter__title">C</p>
+              <div class="letter__bar-container">
+                <div class="letter__bar"></div>
+              </div>
+              <div class="letter__data">
+                <p class="letter__data-number">29</p>
+                <p class="letter__data-percentage">(11.65%)</p>
+              </div>
+            </div>
+          </div>
+          <button class="letters__button">
+            See more <img src="./assets/images/icon-arrow-down.svg" alt="Arrow Down" class="letters__button-icon">
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
 
-  Start typing here… (or paste your text)
-
-  Exclude Spaces
-  Set Character Limit
-
-  Approx. reading time: <!-- Insert number --> minutes
-
-  <!-- Insert number -->
-  Total Characters
-
-  <!-- Insert number -->
-  Word Count
-
-  <!-- Insert number -->
-  Sentence Count
-
-  Letter Density
-  No characters found. Start typing to see letter density.
-
+  <script src="./assets/scripts/app.js"></script>
 </body>
+
 </html>
