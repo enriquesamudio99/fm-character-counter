@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="disable-transitions">
 
 <head>
   <meta charset="UTF-8">
@@ -11,6 +11,15 @@
   <link rel="stylesheet" href="./assets/styles/main.css">
 </head>
 
+<script>
+  (function() {
+    const theme = localStorage.getItem('theme');
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark');
+    }
+  })();
+</script>
+
 <body>
 
   <header class="header">
@@ -19,9 +28,10 @@
         <div class="navbar__container">
           <a href="#" class="navbar__logo">
             <img src="./assets/images/logo-light-theme.svg" alt="Light Logo" class="navbar__logo-img navbar__logo-img--light">
+            <img src="./assets/images/logo-dark-theme.svg" alt="Dark Logo" class="navbar__logo-img navbar__logo-img--dark">
           </a>
-          <button class="navbar__toggle">
-            <img src="./assets/images/icon-moon.svg" alt="Moon Icon" class="navbar__toggle-icon">
+          <button class="navbar__toggle" id="navbar-toggle">
+            <img src="./assets/images/icon-moon.svg" alt="Moon Icon" class="navbar__toggle-icon" id="navbar-toggle-icon">
           </button>
         </div>
       </nav>
