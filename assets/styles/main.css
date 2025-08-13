@@ -163,16 +163,39 @@ ul, ol {
   color: var(--clr-neutral-700);
 }
 
+@media (min-width: 48rem) {
+  .textarea {
+    padding: 1.25rem;
+  }
+}
+
 .textarea-controls__container {
   display: flex;
   flex-direction: column;
   gap: .75rem;
 }
 
+@media (min-width: 48rem) {
+  .textarea-controls__container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0;
+  }
+}
+
 .textarea-controls__left {
   display: flex;
   flex-direction: column;
   gap: .75rem;
+}
+
+@media (min-width: 48rem) {
+  .textarea-controls__left {
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+  }
 }
 
 .textarea-controls__reading-time {
@@ -232,8 +255,20 @@ ul, ol {
   justify-content: space-between;
 }
 
+@media (min-width: 64rem) {
+  .navbar__container {
+    padding: 2.125rem 0 0;
+  }
+}
+
 .navbar__logo {
   height: 1.875rem;
+}
+
+@media (min-width: 48rem) {
+  .navbar__logo {
+    height: 2.5rem;
+  }
 }
 
 .navbar__logo-img {
@@ -251,13 +286,33 @@ ul, ol {
   border-radius: .375rem;
 }
 
+@media (min-width: 48rem) {
+  .navbar__toggle {
+    width: 2.75rem;
+    height: 2.75rem;
+  }
+}
+
 .navbar__toggle-icon {
   width: 1.25rem;
   height: 1.25rem;
 }
 
+@media (min-width: 48rem) {
+  .navbar__toggle-icon {
+    width: 1.375rem;
+    height: 1.375rem;
+  }
+}
+
 .hero__container {
   padding: 2.5rem 0;
+}
+
+@media (min-width: 64rem) {
+  .hero__container {
+    padding: 3rem 0;
+  }
 }
 
 .hero__title {
@@ -265,6 +320,14 @@ ul, ol {
   text-align: center;
   letter-spacing: -1px;
   color: var(--clr-neutral-900);
+}
+
+@media (min-width: 48rem) {
+  .hero__title {
+    font: var(--txt-preset-1);
+    width: 31.875rem;
+    margin-inline: auto;
+  }
 }
 
 .typing__container {
@@ -277,14 +340,38 @@ ul, ol {
   margin-top: 2.5rem;
 }
 
+@media (min-width: 64rem) {
+  .stats {
+    margin-top: 3rem;
+  }
+}
+
 .stats__cards {
   display: grid;
   gap: 1rem;
 }
 
+@media (min-width: 48rem) {
+  .stats__cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 .stats__card {
   padding: 1.6875rem 1.25rem;
   border-radius: .75rem;
+}
+
+@media (min-width: 48rem) {
+  .stats__card {
+    padding: 1.5625rem .75rem;
+  }
+}
+
+@media (min-width: 64rem) {
+  .stats__card {
+    padding: 1.6563rem 1rem;
+  }
 }
 
 .stats__card--total {
@@ -294,11 +381,35 @@ ul, ol {
   background-position: center right -3.1563rem, center;
 }
 
+@media (min-width: 48rem) {
+  .stats__card--total {
+    background-position: center right -4.375rem, center;
+  }
+}
+
+@media (min-width: 64rem) {
+  .stats__card--total {
+    background-position: center right -1.875rem, center;
+  }
+}
+
 .stats__card--word {
   background: url("../images/pattern-word-count.svg"), var(--clr-yellow-500);
   background-size: 9.375rem 9.375rem, cover;
   background-repeat: no-repeat;
   background-position: center right -3.1563rem, center;
+}
+
+@media (min-width: 48rem) {
+  .stats__card--word {
+    background-position: center right -4.375rem, center;
+  }
+}
+
+@media (min-width: 64rem) {
+  .stats__card--word {
+    background-position: center right -1.875rem, center;
+  }
 }
 
 .stats__card--sentence {
@@ -308,10 +419,28 @@ ul, ol {
   background-position: center right -3.1563rem, center;
 }
 
+@media (min-width: 48rem) {
+  .stats__card--sentence {
+    background-position: center right -4.375rem, center;
+  }
+}
+
+@media (min-width: 64rem) {
+  .stats__card--sentence {
+    background-position: center right -1.875rem, center;
+  }
+}
+
 .stats__card-number {
   font: var(--txt-preset-1-mobile);
   letter-spacing: -1px;
   color: var(--clr-neutral-900);
+}
+
+@media (min-width: 48rem) {
+  .stats__card-number {
+    font: var(--txt-preset-1);
+  }
 }
 
 .stats__card-title {
@@ -321,8 +450,26 @@ ul, ol {
   color: var(--clr-neutral-900);
 }
 
+@media (min-width: 64rem) {
+  .stats__card-title {
+    margin-top: .3125rem;
+  }
+}
+
 .letters {
   margin: 1.5rem 0 2rem;
+}
+
+@media (min-width: 48rem) {
+  .letters {
+    margin: 1.5rem 0 5.8125rem;
+  }
+}
+
+@media (min-width: 64rem) {
+  .letters {
+    margin: 1.5rem 0 4rem;
+  }
 }
 
 .letters__title {
