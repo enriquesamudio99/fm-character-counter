@@ -625,6 +625,12 @@ ul, ol {
 .letters__grid {
   display: grid;
   gap: .75rem;
+  overflow: hidden;
+}
+
+.letters__grid--open {
+  overflow: visible;
+  height: auto;
 }
 
 .letter {
@@ -694,4 +700,8 @@ ul, ol {
 
 .dark .letters__button .letters__button-icon {
   filter: invert(100%);
+}
+
+.letters__button--open .letters__button-icon {
+  transform: rotate(180deg);
 }
