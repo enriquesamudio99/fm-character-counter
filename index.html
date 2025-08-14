@@ -47,7 +47,11 @@
   <main class="main">
     <section class="typing">
       <div class="typing__container container">
-        <textarea class="textarea" name="text" id="text" placeholder="Start typing here… (or paste your text)">Design is the silent ambassador of your brand. Simplicity is key to effective communication, creating clarity in every interaction. A great design transforms complex ideas into elegant solutions, making them easy to understand. It blends aesthetics and functionality seamlessly.</textarea>
+        <textarea class="textarea" name="text" id="text" placeholder="Start typing here… (or paste your text)"></textarea>
+        <div class="textarea__message">
+          <svg class="textarea__message-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="15" fill="none" viewBox="0 0 14 15"><path fill="#FE8159" d="M7 1.344A5.899 5.899 0 0 0 1.094 7.25 5.882 5.882 0 0 0 7 13.156a5.899 5.899 0 0 0 5.906-5.906c0-3.254-2.68-5.906-5.906-5.906Zm0-.875c3.719 0 6.781 3.062 6.781 6.781 0 3.746-3.062 6.781-6.781 6.781A6.78 6.78 0 0 1 .219 7.25C.219 3.531 3.254.469 7 .469Zm-.984 9.406h.328V6.594h-.328a.316.316 0 0 1-.329-.328v-.22c0-.163.137-.327.329-.327h1.312c.164 0 .328.164.328.328v3.828h.328c.164 0 .329.164.329.328v.219a.332.332 0 0 1-.329.328H6.016a.316.316 0 0 1-.329-.328v-.219c0-.164.137-.328.329-.328ZM7 3.312a.9.9 0 0 1 .875.876c0 .492-.41.875-.875.875a.864.864 0 0 1-.875-.875c0-.465.383-.875.875-.875Z"/></svg>
+          <p class="textarea__message-text">Limit reached! Your text exceeds <span id="character-limit-number">300</span> characters.</p>
+        </div>
         <div class="textarea-controls">
           <div class="textarea-controls__container">
             <div class="textarea-controls__left">
@@ -64,13 +68,12 @@
                   <span class="checkbox__checkmark"></span>
                   Set Character Limit
                 </label>
-                <!-- <input type="number" name="character-limit" id="character-limit" min="1" value="200" class="textarea-controls__number"> -->
+                <input type="number" name="character-limit" id="character-limit" min="1" class="textarea-controls__number">
               </div>
             </div>
             <div class="textarea-controls__right">
               <p class="textarea-controls__reading-time">
-                Approx. reading time: <<span id="reading-time" class="textarea-controls__reading-time-number">1</span>
-                minute
+                Approx. reading time: <span id="reading-time" class="textarea-controls__reading-time-number"><1 minute</span>
               </p>
             </div>
           </div>
@@ -81,15 +84,15 @@
       <div class="stats__container container">
         <div class="stats__cards">
           <div class="stats__card stats__card--total">
-            <p class="stats__card-number">278</p>
+            <p class="stats__card-number" id="total-characters">00</p>
             <p class="stats__card-title">Total Characters</p>
           </div>
           <div class="stats__card stats__card--word">
-            <p class="stats__card-number">39</p>
+            <p class="stats__card-number" id="word-count">00</p>
             <p class="stats__card-title">Word Count</p>
           </div>
           <div class="stats__card stats__card--sentence">
-            <p class="stats__card-number">04</p>
+            <p class="stats__card-number" id="sentence-count">00</p>
             <p class="stats__card-title">Sentence Count</p>
           </div>
         </div>
@@ -98,9 +101,9 @@
     <section class="letters">
       <div class="letters__container container">
         <h2 class="letters__title">Letter Density</h2>
-        <!-- <p class="letters__text">No characters found. Start typing to see letter density.</p> -->
-        <div class="letters__info">
-          <div class="letters__grid">
+        <p class="letters__empty" id="letters-empty">No characters found. Start typing to see letter density.</p>
+        <div class="letters__info" id="letters-info">
+          <div class="letters__grid" id="letters-grid">
             <div class="letter">
               <p class="letter__title">A</p>
               <div class="letter__bar-container">

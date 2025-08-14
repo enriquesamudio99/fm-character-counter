@@ -122,6 +122,16 @@ select {
   border: none;
 }
 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  appearance: textfield;
+}
+
 button {
   cursor: pointer;
 }
@@ -177,16 +187,51 @@ ul, ol {
   resize: none;
 }
 
+@media (min-width: 48rem) {
+  .textarea {
+    padding: 1.25rem;
+  }
+}
+
+.textarea:focus {
+  outline: none;
+}
+
 .dark .textarea {
   background-color: var(--clr-neutral-700);
   border: .125rem solid var(--clr-neutral-600);
   color: var(--clr-neutral-200);
 }
 
-@media (min-width: 48rem) {
-  .textarea {
-    padding: 1.25rem;
-  }
+.textarea--error {
+  border-color: var(--clr-orange-800);
+  box-shadow: 0 0 .5rem var(--clr-orange-800);
+}
+
+.dark .textarea--error {
+  border-color: var(--clr-orange-500);
+  box-shadow: 0 0 .5rem var(--clr-orange-500);
+}
+
+.textarea__message {
+  display: none;
+  align-items: center;
+  gap: .5rem;
+  font: var(--txt-preset-4);
+  letter-spacing: -0.6px;
+  color: var(--clr-orange-800);
+}
+
+.dark .textarea__message {
+  color: var(--clr-orange-500);
+}
+
+.textarea__message-icon path {
+  fill: var(--clr-orange-800);
+}
+
+.dark .textarea__message-icon path {
+  fill: var(--clr-orange-500);
 }
 
 .textarea-controls__container {
@@ -216,6 +261,29 @@ ul, ol {
     align-items: center;
     gap: 1.5rem;
   }
+}
+
+.textarea-controls__item {
+  display: flex;
+  align-items: center;
+  gap: .625rem;
+}
+
+.textarea-controls__number {
+  width: 3.4375rem;
+  height: 1.8125rem;
+  display: none;
+  font: var(--txt-preset-4);
+  letter-spacing: -0.6px;
+  color: var(--clr-neutral-900);
+  text-align: center;
+  border: 1px solid var(--clr-neutral-600);
+  border-radius: .375rem;
+}
+
+.dark .textarea-controls__number {
+  color: var(--clr-neutral-200);
+  background: transparent;
 }
 
 .textarea-controls__reading-time {
@@ -538,7 +606,19 @@ ul, ol {
   color: var(--clr-neutral-200);
 }
 
+.letters__empty {
+  margin-top: 1.25rem;
+  font: var(--txt-preset-4);
+  letter-spacing: -0.6px;
+  color: var(--clr-neutral-600);
+}
+
+.dark .letters__empty {
+  color: var(--clr-neutral-200);
+}
+
 .letters__info {
+  display: none;
   margin-top: 1.25rem;
 }
 
